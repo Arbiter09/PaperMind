@@ -1,0 +1,82 @@
+{
+  "summary": {
+    "num_questions": 5,
+    "avg_relevance_score": 0.82,
+    "hallucination_rate": 0.2,
+    "re_retrieval_rate": 0.4,
+    "avg_critic_score": 0.74,
+    "avg_elapsed_s": 8.63
+  },
+  "results": [
+    {
+      "id": "q1",
+      "question": "What are the main advantages of retrieval-augmented generation over fine-tuning?",
+      "domain": "RAG",
+      "answer_snippet": "Retrieval-augmented generation (RAG) offers several advantages over fine-tuning. According to the papers [1][2], RAG allows models to access up-to-date information without retraining, reduces hallucination by grounding answers in retrieved documents, and requires significantly less compute...",
+      "num_citations": 5,
+      "critic_score": 0.85,
+      "retry_count": 1,
+      "re_retrieval_triggered": 0,
+      "relevance_score": 0.9,
+      "hallucination_flag": 0,
+      "judge_reasoning": "Answer is well-grounded in the cited papers and accurately describes RAG advantages with specific citations.",
+      "elapsed_s": 7.42
+    },
+    {
+      "id": "q2",
+      "question": "How does the attention mechanism in transformers work?",
+      "domain": "Transformers",
+      "answer_snippet": "The attention mechanism in transformers, as described in [1], computes a weighted sum of value vectors, where the weights are derived from the dot-product similarity between query and key vectors. Specifically, the scaled dot-product attention is: Attention(Q,K,V) = softmax(QK^T / sqrt(d_k))V...",
+      "num_citations": 6,
+      "critic_score": 0.92,
+      "retry_count": 1,
+      "re_retrieval_triggered": 0,
+      "relevance_score": 0.95,
+      "hallucination_flag": 0,
+      "judge_reasoning": "Precise, technically accurate answer directly supported by the original Attention Is All You Need paper.",
+      "elapsed_s": 6.88
+    },
+    {
+      "id": "q3",
+      "question": "What methods are used to reduce hallucination in large language models?",
+      "domain": "LLMs",
+      "answer_snippet": "Several methods for reducing hallucination are discussed in the literature. Papers [2][3] highlight retrieval augmentation as a primary approach, while [4] discusses chain-of-thought prompting and self-consistency as techniques that improve factuality. Additionally, [1] notes that RLHF-trained...",
+      "num_citations": 5,
+      "critic_score": 0.61,
+      "retry_count": 2,
+      "re_retrieval_triggered": 1,
+      "relevance_score": 0.75,
+      "hallucination_flag": 1,
+      "judge_reasoning": "Mostly accurate but one citation claim about a specific accuracy percentage could not be verified in the provided papers.",
+      "elapsed_s": 12.14
+    },
+    {
+      "id": "q4",
+      "question": "How do diffusion models generate images?",
+      "domain": "Diffusion",
+      "answer_snippet": "Diffusion models generate images through a two-phase process [1][3]. During training, Gaussian noise is progressively added to images over T timesteps (forward process). The model learns to reverse this process — predicting and removing noise at each step — using a U-Net architecture...",
+      "num_citations": 4,
+      "critic_score": 0.78,
+      "retry_count": 1,
+      "re_retrieval_triggered": 0,
+      "relevance_score": 0.85,
+      "hallucination_flag": 0,
+      "judge_reasoning": "Accurate high-level description of the forward and reverse diffusion process, well-supported by cited papers.",
+      "elapsed_s": 8.31
+    },
+    {
+      "id": "q5",
+      "question": "What is reinforcement learning from human feedback and why is it used?",
+      "domain": "RLHF",
+      "answer_snippet": "Reinforcement learning from human feedback (RLHF) is a training technique that aligns language models with human preferences [1][2]. The process involves three stages: supervised fine-tuning on demonstrations, training a reward model from human comparisons, and using PPO to optimise the LLM...",
+      "num_citations": 5,
+      "critic_score": 0.55,
+      "retry_count": 2,
+      "re_retrieval_triggered": 1,
+      "relevance_score": 0.65,
+      "hallucination_flag": 0,
+      "judge_reasoning": "Correct explanation of RLHF stages but somewhat shallow on the 'why' — the alignment motivation could be elaborated more.",
+      "elapsed_s": 8.4
+    }
+  ]
+}
